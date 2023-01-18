@@ -29,7 +29,7 @@ Users should be able to:
 ### Screenshot
 
 ![](./images/finished-desktop-view.png)
-![](./images/finished-mobile-view-one.png) ![](./images/finished-mobile-view-two.png)
+<img src="./images/finished-mobile-view-one.png" width="300" height="1020" /> <img src="./images/finished-mobile-view-two.png" width="300" height="1020" />
 
 &nbsp;  
 ### Links
