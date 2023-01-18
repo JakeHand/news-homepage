@@ -1,0 +1,286 @@
+/* Desktop page layout */
+html {
+    font-size: 15px;
+    font-family: 'Inter';
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: hsl(36, 100%, 99%);
+}
+
+main {
+    display: grid;
+    grid-template: 2.66rem 3.673rem 20rem 1.867rem 12.2rem 4.733rem 8.6rem / 23.333rem 2rem 23.333rem 2rem 23.333rem;
+}
+
+/* Typography */
+p,
+li {
+    color: hsl(236, 13%, 42%);
+    line-height: 1.73rem;
+}
+
+/* Header & nav */
+header {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.open-menu-img {
+    display: none;
+}
+
+nav {
+    grid-area: 1 / 2 / 2 / 6;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+nav img {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+    padding: 0 1.333rem;
+    margin: 0;
+}
+
+li:hover,
+h5:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+.categories {
+    padding-right: 0;
+}
+
+/* Hero image */
+.hero-img-container {
+    grid-area: 3 / 1 / span 1 / span 3;
+}
+
+.hero-img-container img {
+    width: 100%;
+}
+
+/* Title */
+.title-container {
+    grid-area: 5 / 1 / span 1 / span 1;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 3.73rem;
+    line-height: 3.73rem;
+    padding: 0;
+    margin: 0;
+    color: hsl(240, 100%, 5%);
+}
+
+/* Main paragraph */
+.main-paragraph-container {
+    grid-area: 5 / 3 / span 1/ span 1;
+    display: grid;
+    align-content: space-between;
+    padding-right: 0.35rem;
+}
+
+.main-paragraph-container p {
+    line-height: 1.733rem;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    width: 12.33rem;
+    height: 3.2rem;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.93rem;
+    letter-spacing: 0.29rem;
+    color: hsl(36, 100%, 99%);
+    background-color: hsl(5, 85%, 63%);
+}
+
+button:hover {
+    background-color: hsl(240, 100%, 5%);
+    cursor: pointer;
+}
+
+/* New articles */
+.new-container {
+    grid-area: 3 / 5 / span 3 / span 1;
+    background-color: hsl(240, 100%, 5%);
+}
+
+.new-container div {
+    border-bottom: 1px solid hsl(233, 8%, 79%);
+    margin: 0 1.6rem;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 2.67rem;
+    color: hsl(35, 77%, 62%);
+    margin: 2.133rem 1.6rem 0.2rem;
+}
+
+h3 {
+    font-weight: 800;
+    font-size: 1.33rem;
+    line-height: 1.6rem;
+    color: hsl(36, 100%, 99%);
+    margin: 2.067rem 0 0;
+}
+
+h3:hover {
+    color:hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+.new-container p {
+    line-height: 1.73rem;
+    color: hsl(233, 8%, 79%);
+    margin: 0.533rem 0 1.933rem;
+}
+
+/* Related articles */
+.related-container {
+    display: flex;
+    padding: 0;
+}
+
+.related-container div {
+    padding: 0;
+}
+
+.related-img-container {
+    margin-right: 1.6rem;
+}
+
+.one {
+    grid-area: 7 / 1 / span 1 / span 1;
+}
+
+.two {
+    grid-area: 7 / 3 / span 1 /span 1;
+}
+
+.three {
+    grid-area: 7 / 5 / span 1 / span 1;
+}
+
+.related-img {
+    width: 6.67rem;
+    height: 8.47rem;
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 2.13rem;
+    margin: 0;
+    color: hsl(233, 8%, 79%);
+}
+
+h5 {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: hsl(240, 100%, 5%);
+    margin: 0.8rem 0 0;
+}
+
+.related-container p {
+    margin-top: 0.6rem;
+}
+
+/* Mobile phone view */
+@media only screen and (max-width: 480px) {
+    body {
+        margin: 0;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 1.067rem 2.533rem;
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1.867rem;
+    }
+
+    .open-menu-img {
+        display: inline;
+        height: 1.133rem;
+    }
+
+    nav {
+        background-color: hsl(36, 100%, 99%);
+        width: 17.067rem;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        right: -100%;
+        transition: 0.3s;
+    }
+
+    nav img {
+        display: block;
+        position: absolute;
+        top: 1.82rem;
+        right: 1.39rem;
+    }
+
+    ul {
+        list-style-type: decimal;
+        height: 14.4rem;
+        left: 0;
+        width: 100%;
+        padding-left: 1.6rem;
+        position: absolute;
+        top: 9.6rem;
+    }
+
+    li {
+        display: block;
+        font-size: 1.2rem;
+        padding-top: 1.6rem;
+        color: hsl(240, 100%, 5%)
+    }
+
+    .hero-img-container {
+        margin: 2.133rem 0 1.6rem;
+    }
+
+    h1 {
+        font-size: 2.667rem;
+        line-height: 2.667rem;
+        margin-bottom: 1.0667rem;
+    }
+
+    button {
+        margin: 1.6rem 0 4.267rem;
+    }
+
+    .new-container {
+        margin-bottom: 2.133rem;
+    }
+
+    .related-container {
+        margin-top: 2.133rem;
+    }
+}
